@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Solitreo&family=Work+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <header class="flex-wrapper">
+    <div class="content-wrapper">
+      <h1>Git & GitHub Workflow</h1>
+    </div>
+  </header>
+  <main class="flex-wrapper">
+    <div class="content-wrapper">
+      <h2>Beginning a new project</h2>
+      <section class="new-projects section-wrapper">
+        <div class="list-wrapper">
+          <button>New Git Repo</button>
+          <ol class="new-git-repo hide list">
+            <li>git init</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>Create GitHub repo</li>
+            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Make A New Project</button>
+          <ol class="make-new-project hide list">
+            <li>mkdir <i>directory-name</i></li>
+            <li>cd <i>directory-name</i></li>
+            <li>touch <i>filename</i></li>
+            <li>git init</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>Create GitHub repo</li>
+            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Fork and Clone Project</button>
+          <ol class="clone-project hide list">
+            <li>Fork project</li>
+            <li>Choose only main branch or additional topic branches to be forked</li>
+            <li>Copy ssh url from my repo</li>
+            <li>Navigate in the command line to where directory will be added</li>
+            <li>git clone <i>ssh url from my repo</i></li>
+            <li>cd <i>project-name</i></li>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Download Project</button>
+          <ol class="download-project hide list">
+            <li>cd <i>directory-name</i></li>
+            <li>touch <i>filename</i></li>
+            <li>git init</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>Create GitHub repo</li>
+            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+          </ol>
+        </div>
+      </section>
+
+      <h2>Existing projects</h2>
+
+      <section class="existing-projects section-wrapper">
+        <div class="list-wrapper">
+          <button>Updating Existing Project</button>
+          <ol class="update-existing-project hide list">
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>git push origin <i>branch-name</i></li>
+          </ol>
+        </div>
+      </section>
+      <h2>Working with a team</h2>
+
+      <section class="existing-projects section-wrapper">
+        <div class="list-wrapper">
+          <button>I'm added to the project</button>
+          <ol class="working-with-a-team hide list">
+            <li>Fork project</li>
+            <li>Choose only main branch or additional topic branches to be forked</li>
+            <li>Copy ssh url from my repo</li>
+            <li>Navigate in the command line to where directory will be added</li>
+            <li>git clone <i>ssh url from my repo</i></li>
+            <li>cd <i>project-name</i></li>
+            <li>Create a topic branch</li>
+            <ul>
+              <li>git checkout <i>topic-branch-name</i></li>
+            </ul>
+            <li>Work on the topic branch</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>Merge work into main branch</li>
+            <ul>
+              <li>git checkout main</li>
+              <li>git merge <i>topic-branch-name</i></li>
+            </ul>
+        </div>
+        <div class="list-wrapper">
+          <button>Update local branchs with upstream branch</button>
+          <ol class="update-local-branches hide list">
+            <li>Connect to the upstream repo</li>
+            <ul>
+              <li>git remote add upstream <i>ssh url from upstream repo</i></li>
+            </ul>
+            <li>Fetch from upsteam branch</li>
+            <ul>
+              <li>git fetch upstream</li>
+            </ul>
+            <li>Checkout main branch</li>
+            <ul>
+              <li>git checkout main</li>
+            </ul>
+            <li>Merge upstream main branch into local main branch</li>
+            <ul>
+              <li>git merge upstream/main</li>
+            </ul>
+            <li>Checkout topic branch</li>
+            <ul>
+              <li>git checkout <i>topic-branch</i></li>
+            </ul>
+            <li>Merge main branch into topic branch</li>
+            <ul>
+              <li>git merge main</li>
+            </ul>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Daily workflow</button>
+          <ol class="daily-workflow hide list">
+            <li>git fetch upstream</li>
+            <li>git checkout main</li>
+            <li>git merge upstream/main</li>
+            <li>git checkout <i>topic-branch</i></li>
+            <li>git merge main</li>
+            <li>Work on the topic branch</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
+            <li>Merge work into main branch</li>
+            <ul>
+              <li>git checkout main</li>
+              <li>git merge <i>topic-branch-name</i></li>
+            </ul>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Ready to issue Pull Request</button>
+          <ol class="working-with-a-team hide list">
+            <li>All code has been added, committed, and merged into the main branch</li>
+            <li>Push main branch to GitHub remote repo</li>
+            <ul>
+              <li>git push origin main</li>
+            </ul>
+            <li>Issue pull request</li>
+            <ul>
+              <li>Click the "Pull Request" button</li>
+              <li>Click the "Create Pull Request" button</li>
+              <li>Click the "New Pull Request" button</li>
+              <li>Choose which branch you want to compare</li>
+              <li>Check the git diff to be sure the changes are what you want</li>
+              <li>Click the "Create Pull Request" button</li>
+            </ul>
+          </ol>
+        </div>
+      </section>
+
+      <h2>Troubleshooting error messages</h2>
+      <section class="troubleshooting-projects section-wrapper">
+        <div class="list-wrapper">
+          <button>Error message</button>
+          <ol class="error-messages hide list">
+            <li>Read the error message</li>
+            <li>Google the error message</li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="flex-wrapper">
+    <div class="content-wrapper">
+      <p>Copyright
+        <script>document.write(new Date().getFullYear())</script> | Lisa Savoie
+      </p>
+    </div>
+
+  </footer>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
