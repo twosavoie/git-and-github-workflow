@@ -143,6 +143,9 @@ textarea {
     padding-bottom: 40px;
     box-sizing: border-box;
   }
+  ul li {
+    list-style: square;
+  }
   footer p {
     text-align: center;
     padding-bottom: 40px;

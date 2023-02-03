@@ -4,4 +4,4 @@ Different workflows arranged in categories. The commands to be run are listed in
 
 There's a GitHub Pages version. 
 
-Hope you find it helpful! 🙂
+Hope you find it helpful. Stay tuned for updates! 🙂

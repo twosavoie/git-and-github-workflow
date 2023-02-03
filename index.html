@@ -95,7 +95,33 @@
             <li>git push origin <i>branch-name</i></li>
           </ol>
         </div>
+        <div class="list-wrapper">
+          <button>Creating a Topic Branch</button>
+          <ol class="create-topic-branch hide list">
+            <li>Add and commit all changes before switching branches</li>
+            <ul>
+              <li>git add -A</li>
+              <li>git commit -m "<i>Message</i>"</li>
+            </ul>
+            <li>git checkout -b <i>topic-branch-name</i></li>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Merge Topic Branch into Main Branch</button>
+          <ol class="merge-topic-branch hide list">
+            <li>Add and commit all changes before switching branches</li>
+            <ul>
+              <li>git add -A</li>
+              <li>git commit -m "<i>Message</i>"</li>
+            </ul>
+            <li>git checkout main</li>
+            <li>git merge <i>topic-branch-name</i> -m "<i>Message</i>"</li>
+          </ol>
+        </div>
       </section>
+      </section>
+
+
       <h2>Working with a team</h2>
 
       <section class="existing-projects section-wrapper">
@@ -110,7 +136,7 @@
             <li>cd <i>project-name</i></li>
             <li>Create a topic branch</li>
             <ul>
-              <li>git checkout <i>topic-branch-name</i></li>
+              <li>git checkout -b <i>topic-branch-name</i></li>
             </ul>
             <li>Work on the topic branch</li>
             <li>git add -A</li>
@@ -118,7 +144,7 @@
             <li>Merge work into main branch</li>
             <ul>
               <li>git checkout main</li>
-              <li>git merge <i>topic-branch-name</i></li>
+              <li>git merge <i>topic-branch-name</i> -m "<i>Message</i>"</li>
             </ul>
         </div>
         <div class="list-wrapper">
@@ -146,7 +172,7 @@
             </ul>
             <li>Merge main branch into topic branch</li>
             <ul>
-              <li>git merge main</li>
+              <li>git merge main -m "<i>Message</i>"</li>
             </ul>
           </ol>
         </div>
@@ -157,14 +183,14 @@
             <li>git checkout main</li>
             <li>git merge upstream/main</li>
             <li>git checkout <i>topic-branch</i></li>
-            <li>git merge main</li>
+            <li>git merge main -m "<i>Message</i>"</li>
             <li>Work on the topic branch</li>
             <li>git add -A</li>
             <li>git commit -m "<i>Message</i>"</li>
             <li>Merge work into main branch</li>
             <ul>
               <li>git checkout main</li>
-              <li>git merge <i>topic-branch-name</i></li>
+              <li>git merge <i>topic-branch-name</i> -m "<i>Message</i>"</li>
             </ul>
           </ol>
         </div>
@@ -189,13 +215,40 @@
         </div>
       </section>
 
-      <h2>Troubleshooting error messages</h2>
+      <h2>Troubleshooting</h2>
       <section class="troubleshooting-projects section-wrapper">
+        <div class="list-wrapper">
+          <button>Helpful Commands</button>
+          <ol class="helpful-commands hide list">
+            <li>What directory am I in?</li>
+            <ul>
+              <li>pwd</li>
+            </ul>
+            <li>Have my changes been added and committed?</li>
+            <ul>
+              <li>git status</li>
+            </ul>
+            <li>What remote repos have been added to my directory?</li>
+            <ul>
+              <li>git remote -v</li>
+            </ul>
+          </ol>
+        </div>
         <div class="list-wrapper">
           <button>Error message</button>
           <ol class="error-messages hide list">
             <li>Read the error message</li>
             <li>Google the error message</li>
+            <li>Be very careful if the command is to remove files or folders. Something removed in the command line is gone-gone! 😰</li>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button>Merge Conflicts</button>
+          <ol class="merge-conflicts hide list">
+            <li>Resolve merge conflicts in the text editor</li>
+            <li>Remove all conflict markers</li>
+            <li>git add -A</li>
+            <li>git commit -m "<i>Message</i>"</li>
           </ol>
         </div>
       </section>
