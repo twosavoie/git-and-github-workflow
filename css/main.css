@@ -177,6 +177,8 @@ h3 {
 
 ul li {
   list-style: square;
+  /* trying something 🙂 */
+  /* list-style-type: "🙂"; */
 }
 
 .resource-wrapper ul {
@@ -209,6 +211,9 @@ footer p {
   opacity: 1;
   height: auto;
   transition: 0.5s;
+}
+.copyright-image {
+  padding-bottom: 2px;
 }
 
 /* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825
