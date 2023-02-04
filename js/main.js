@@ -7,22 +7,37 @@
 
 
 
-// const button = document.querySelectorAll("button");
-// var list = document.querySelector(".list");
-// var modalX = document.querySelector(".modal-x");
+const button = document.querySelectorAll("button");
+var list = document.querySelector(".list");
+var modalX = document.querySelector(".modal-x");
 
-// button.forEach((button) => {
-//   console.log("working?");
-//   button.addEventListener("click", function() {
-//     list.classList.remove("hide");
-//     list.classList.add("show");
-//   });
-// });
+button.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (button.nextElementSibling.classList.contains("hide")) {
+      button.nextElementSibling.classList.remove("hide");
+      button.nextElementSibling.classList.add("show");
+    } else {
+      button.nextElementSibling.classList.remove("show");
+      button.nextElementSibling.classList.add("hide");
+    }
+  });
+});
+// Closes all lists when the Escape key is clicked
+button.forEach((button) => {
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      if (button.nextElementSibling.classList.contains("show")) {
+        closeList();
+      }
+    }
+  });
+  var closeList = function () {
+    button.nextElementSibling.classList.remove("show");
+    button.nextElementSibling.classList.add("hide");
+  };
+});
 
-// var closeModal = function () {
-//   modal.classList.remove("show-modal");
-//   button.innerText = "Who's got this?";
-// };
+
 
 // // Bonus Step
 // // var openModal = function () {
@@ -42,11 +57,4 @@
 //   closeModal();
 // });
 
-// document.addEventListener("keydown", function (e) {
-//   // console.log(e.key);
-//   if (e.key === "Escape") {
-//     if (modal.classList.contains("show-modal")) {
-//       closeModal();
-//     }
-//   }
-// });
+

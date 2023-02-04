@@ -86,81 +86,132 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-  /* font-family: 'Solitreo', cursive;
+/* font-family: 'Solitreo', cursive;
    font-family: 'Work Sans', sans-serif; */
-   :root {
-    --header-font:'Work Sans', sans-serif;
-    --list-item-font: 'Solitreo', cursive;
-    --primary-color: #0A3B67;
-    --secondary-color: #1477D1;
-    --accent-color: #75cb00;
-    --text-color: #4C5D6C;
-  } 
+:root {
+  --header-font: 'Work Sans', sans-serif;
+  --list-item-font: 'Solitreo', cursive;
+  --primary-color: #0A3B67;
+  --secondary-color: #1477D1;
+  --accent-color: #75cb00;
+  --text-color: #4C5D6C;
+  --hover-color: #447700;
+}
 
-  /* Global styles */
-  * {
-    box-sizing: border-box;
-  }
-  h1, h2, h3, button {
-    font-family: var(--header-font);
-    color: var(--primary-color);
-  }
-  p, li {
-    font-family: var(--header-font);
-    color: var(--text-color);
-  }
-  button {
-    background: white;
-    border-color: var(--accent-color);
-    font-size: 1.25rem;
-    text-align: left;
-  }
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    border-bottom: 2px solid var(--accent-color);
-  }
-  h2 {
-    font-size: 2rem
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-   
-  .flex-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-  }
-  .content-wrapper {
-     max-width: 1200px;
-     width: 90%;
-  }
-  .section-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .list-wrapper {
-    /* maybe use flex basis... properties */
-    width: 100%;
-    padding-bottom: 40px;
-  }
-  ul li {
-    list-style: square;
-  }
-  footer p {
-    text-align: center;
-    padding-bottom: 40px;
-  }
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
 
-  /* .hide {
-    display: none;
-  }
-  .show {
-    display: block; */
-  /* } */
+h1,
+h2,
+h3,
+button {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+}
 
-  /* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825
+p,
+li,
+a {
+  font-family: var(--header-font);
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+button {
+  background: white;
+  border-color: var(--accent-color);
+  font-size: 1.25rem;
+  text-align: left;
+  border-top: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  border-right: 2px solid var(--hover-color);
+  border-bottom: 2px solid var(--hover-color);
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--hover-color);
+  transition: 0.3s;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+h2 {
+  font-size: 2rem
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 90%;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.list-wrapper {
+  /* maybe use flex basis... properties */
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+ul li {
+  list-style: square;
+}
+
+.resource-wrapper ul {
+  padding-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.resource-wrapper ul li {
+  list-style: none;
+  width: 100%;
+  padding: 5px 0;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.hide {
+  opacity: 0;
+  height: 0;
+  /* allows buttons below long lists to be clickable otherwise use font-size of 3px */
+  overflow: hidden; 
+}
+
+.show {
+  opacity: 1;
+  height: auto;
+  transition: 0.5s;
+}
+
+/* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825
   
 
   .modal {
@@ -201,21 +252,30 @@ textarea {
     font-size: 0.6em;
   } */
 
-  @media (min-width: 768px) {
-    .section-wrapper {
-          /* maybe use flex basis... properties */
-      justify-content: space-between;
-    }
-    .list-wrapper {
-      width: 45%;
-      /* padding: 0 20px 40px 20px; */
-    }
+@media (min-width: 768px) {
+  .section-wrapper {
+    /* maybe use flex basis... properties */
+    justify-content: space-between;
   }
-  @media (min-width: 1200px) {
-    .list-wrapper {
-      width: 30%;
-    }
+
+  .list-wrapper {
+    width: 45%;
   }
+
+  .resource-wrapper ul li {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-wrapper {
+    width: 30%;
+  }
+
+  .resource-wrapper ul li {
+    width: 30%;
+  }
+}
 
 /* ==========================================================================
    Helper classes
@@ -310,9 +370,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -323,6 +383,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -339,11 +400,11 @@ textarea {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
 
   /*
@@ -390,4 +451,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
