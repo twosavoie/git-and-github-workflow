@@ -98,6 +98,9 @@ textarea {
   } 
 
   /* Global styles */
+  * {
+    box-sizing: border-box;
+  }
   h1, h2, h3, button {
     font-family: var(--header-font);
     color: var(--primary-color);
@@ -141,7 +144,6 @@ textarea {
     /* maybe use flex basis... properties */
     width: 100%;
     padding-bottom: 40px;
-    box-sizing: border-box;
   }
   ul li {
     list-style: square;
@@ -150,6 +152,54 @@ textarea {
     text-align: center;
     padding-bottom: 40px;
   }
+
+  /* .hide {
+    display: none;
+  }
+  .show {
+    display: block; */
+  /* } */
+
+  /* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825
+  
+
+  .modal {
+    display: none;
+    position: relative;
+    background: #fff;
+    padding: 2em 1em 1em;
+    border-radius: 10px;
+  }
+  
+  .modal img {
+    width: 80%;
+  }
+  
+  .modal p {
+    font-size: 1em;
+  }
+  .modal.show-modal {
+    display: block;
+  }
+  .modal .modal-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #292929;
+    font-size: 0.5em;
+  }
+  
+  .modal .modal-x:hover {
+    font-weight: bold;
+    font-size: 0.6em;
+  } */
 
   @media (min-width: 768px) {
     .section-wrapper {
