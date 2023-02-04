@@ -102,9 +102,12 @@ textarea {
     font-family: var(--header-font);
     color: var(--primary-color);
   }
-  p, li {
+  p, li, a {
     font-family: var(--header-font);
     color: var(--text-color);
+  }
+  a:hover {
+    color: var(--accent-color);
   }
   button {
     background: white;
@@ -146,6 +149,18 @@ textarea {
   ul li {
     list-style: square;
   }
+  .resource-wrapper ul {
+    padding-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+  .resource-wrapper ul li {
+    list-style: none;
+    width: 100%;
+    padding: 5px 0;
+  }
   footer p {
     text-align: center;
     padding-bottom: 40px;
@@ -158,11 +173,16 @@ textarea {
     }
     .list-wrapper {
       width: 45%;
-      /* padding: 0 20px 40px 20px; */
+    }
+    .resource-wrapper ul li {
+      width: 45%;
     }
   }
   @media (min-width: 1200px) {
     .list-wrapper {
+      width: 30%;
+    }
+    .resource-wrapper ul li {
       width: 30%;
     }
   }
