@@ -172,7 +172,7 @@ h3 {
 .list-wrapper {
   /* maybe use flex basis... properties */
   width: 100%;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 ul li {
@@ -204,14 +204,16 @@ footer p {
   opacity: 0;
   height: 0;
   /* allows buttons below long lists to be clickable otherwise use font-size of 3px */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .show {
   opacity: 1;
   height: auto;
   transition: 0.5s;
+  padding-bottom: 40px;
 }
+
 .copyright-image {
   padding-bottom: 2px;
 }
@@ -260,7 +262,8 @@ footer p {
 @media (min-width: 768px) {
   .section-wrapper {
     /* maybe use flex basis... properties */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    column-gap: 10%;
   }
 
   .list-wrapper {
@@ -273,6 +276,10 @@ footer p {
 }
 
 @media (min-width: 1200px) {
+  .section-wrapper {
+    column-gap: 5%;
+  }
+
   .list-wrapper {
     width: 30%;
   }
