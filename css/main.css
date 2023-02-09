@@ -129,42 +129,18 @@ body {
 
 h1,
 h2,
-h3,
-button {
+h3 {
   font-family: var(--header-font);
   color: var(--primary-color);
 }
 
-button {
-  color: var(--button-color);
-}
-
 p,
 li,
-a {
+a,
+label 
+ {
   font-family: var(--header-font);
   color: var(--text-color);
-}
-
-a:hover {
-  color: var(--accent-color);
-}
-
-button {
-  background: var(--button-background-color);
-  border-color: var(--accent-color);
-  font-size: 1.25rem;
-  text-align: left;
-  border-top: 2px solid var(--accent-color);
-  border-left: 2px solid var(--accent-color);
-  border-right: 2px solid var(--border-accent-color);
-  border-bottom: 2px solid var(--border-accent-color);
-}
-
-button:hover {
-  cursor: pointer;
-  border: 2px solid var(--hover-color);
-  transition: 0.3s;
 }
 
 h1 {
@@ -180,7 +156,15 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  padding-left: 5px;
+}
+
+label {
+  line-height: 2;
+}
+.list-wrapper ul {
+  margin: 0;
 }
 
 .flex-wrapper {
