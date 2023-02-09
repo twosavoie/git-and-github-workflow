@@ -137,8 +137,7 @@ h3 {
 p,
 li,
 a,
-label 
- {
+label {
   font-family: var(--header-font);
   color: var(--text-color);
 }
@@ -157,12 +156,27 @@ h2 {
 h3 {
   font-size: 1.5rem;
   border-left: 2px solid var(--accent-color);
-  padding-left: 5px;
+  padding-left: 6px;
 }
+
+/* Change the colors of the checkboxes */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+/* On mouse-over, add a grey background color */
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+/* .container:hover input~.checkmark {
+  background-color: pink;
+} */
+
+/* When the checkbox is checked, add a blue background */
+/* .container input:checked~.checkmark {
+  background-color: red;
+} */
+/* End change the colors of the checkboxes */
 
 label {
   line-height: 2;
 }
+
 .list-wrapper ul {
   margin: 0;
 }
