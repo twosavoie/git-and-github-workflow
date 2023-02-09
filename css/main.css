@@ -86,106 +86,183 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-  /* font-family: 'Solitreo', cursive;
+/* font-family: 'Solitreo', cursive;
    font-family: 'Work Sans', sans-serif; */
-   :root {
-    --header-font:'Work Sans', sans-serif;
-    --list-item-font: 'Solitreo', cursive;
-    --primary-color: #0A3B67;
+:root {
+  --header-font: 'Work Sans', sans-serif;
+  --list-item-font: 'Solitreo', cursive;
+  --primary-color: #0A3B67;
+  --button-color: #0A3B67;
+  --secondary-color: #1477D1;
+  --accent-color: #75cb00;
+  --text-color: #4C5D6C;
+  --border-accent-color: #447700;
+  --button-background-color: #ffffff;
+  --hover-color: #447700;
+  --background-color: #ffffff;
+  --foreground-color: #0A3B67;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0A3B67;
+    --foreground-color: #ffffff;
+    --primary-color: #ffffff;
+    --button-color: #0A3B67;
     --secondary-color: #1477D1;
     --accent-color: #75cb00;
-    --text-color: #4C5D6C;
-  } 
+    --text-color: #ffffff;
+    --border-accent-color: #75cb00;
+    --hover-color: #a6ff2e;
+  }
+}
 
-  /* Global styles */
-  h1, h2, h3, button {
-    font-family: var(--header-font);
-    color: var(--primary-color);
-  }
-  p, li, a {
-    font-family: var(--header-font);
-    color: var(--text-color);
-  }
-  a:hover {
-    color: var(--accent-color);
-  }
-  button {
-    background: white;
-    border-color: var(--accent-color);
-    font-size: 1.25rem;
-    text-align: left;
-  }
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    border-bottom: 2px solid var(--accent-color);
-  }
-  h2 {
-    font-size: 2rem
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-   
-  .flex-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-  }
-  .content-wrapper {
-     max-width: 1200px;
-     width: 90%;
-  }
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+h1,
+h2,
+h3,
+button {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+}
+
+button {
+  color: var(--button-color);
+}
+
+p,
+li,
+a {
+  font-family: var(--header-font);
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+button {
+  background: var(--button-background-color);
+  border-color: var(--accent-color);
+  font-size: 1.25rem;
+  text-align: left;
+  border-top: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  border-right: 2px solid var(--border-accent-color);
+  border-bottom: 2px solid var(--border-accent-color);
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--hover-color);
+  transition: 0.3s;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 90%;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 20px;
+}
+
+.list-wrapper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+ul li {
+  list-style: square;
+  /* trying something 🙂 */
+  /* list-style-type: "🙂"; */
+}
+
+.resource-wrapper ul {
+  padding-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.resource-wrapper ul li {
+  list-style: none;
+  width: 100%;
+  padding: 5px 0;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.copyright-image {
+  padding-bottom: 2px;
+}
+
+@media (min-width: 768px) {
   .section-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .list-wrapper {
     /* maybe use flex basis... properties */
-    width: 100%;
-    padding-bottom: 40px;
-    box-sizing: border-box;
-  }
-  ul li {
-    list-style: square;
-  }
-  .resource-wrapper ul {
-    padding-left: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding-bottom: 40px;
-  }
-  .resource-wrapper ul li {
-    list-style: none;
-    width: 100%;
-    padding: 5px 0;
-  }
-  footer p {
-    text-align: center;
-    padding-bottom: 40px;
+    /* justify-content: space-between; */
+    column-gap: 10%;
   }
 
-  @media (min-width: 768px) {
-    .section-wrapper {
-          /* maybe use flex basis... properties */
-      justify-content: space-between;
-    }
-    .list-wrapper {
-      width: 45%;
-    }
-    .resource-wrapper ul li {
-      width: 45%;
-    }
+  .list-wrapper {
+    width: 45%;
   }
-  @media (min-width: 1200px) {
-    .list-wrapper {
-      width: 30%;
-    }
-    .resource-wrapper ul li {
-      width: 30%;
-    }
+
+  .resource-wrapper ul li {
+    width: 45%;
   }
+}
+
+@media (min-width: 1200px) {
+  .section-wrapper {
+    column-gap: 5%;
+  }
+
+  .list-wrapper {
+    width: 30%;
+  }
+
+  .resource-wrapper ul li {
+    width: 30%;
+  }
+}
 
 /* ==========================================================================
    Helper classes
@@ -280,9 +357,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -293,6 +370,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -309,11 +387,11 @@ textarea {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: " ("attr(href) ")";
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: " ("attr(title) ")";
   }
 
   /*
@@ -360,4 +438,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
