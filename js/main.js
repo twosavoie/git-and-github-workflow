@@ -7,35 +7,42 @@
 
 
 
-const button = document.querySelectorAll("button");
-var list = document.querySelector(".list");
+const revealListButton = document.querySelectorAll(".reveal-list");
+// var gitList = document.querySelector(".list");
+
+// Maybe use a class instead since there are multiple types of list?
+var gitListItem = document.querySelectorAll("li");
 var modalX = document.querySelector(".modal-x");
 
-button.forEach((button) => {
-  button.addEventListener("click", function () {
-    if (button.nextElementSibling.classList.contains("hide")) {
-      button.nextElementSibling.classList.remove("hide");
-      button.nextElementSibling.classList.add("show");
+// Toggles classes to show and hide lists
+revealListButton.forEach((revealListButton) => {
+  revealListButton.addEventListener("click", function () {
+    if (revealListButton.nextElementSibling.classList.contains("hide")) {
+      revealListButton.nextElementSibling.classList.remove("hide");
+      revealListButton.nextElementSibling.classList.add("show");
     } else {
-      button.nextElementSibling.classList.remove("show");
-      button.nextElementSibling.classList.add("hide");
+      closeList();
     }
   });
-});
-// Closes all lists when the Escape key is clicked
-button.forEach((button) => {
+
+  // Closes all lists when the Escape key is clicked
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      if (button.nextElementSibling.classList.contains("show")) {
+      if (revealListButton.nextElementSibling.classList.contains("show")) {
         closeList();
       }
     }
   });
-  var closeList = function () {
-    button.nextElementSibling.classList.remove("show");
-    button.nextElementSibling.classList.add("hide");
-  };
+
+  // event handler that closes list
+  function closeList() {
+    revealListButton.nextElementSibling.classList.remove("show");
+    revealListButton.nextElementSibling.classList.add("hide");
+  }
 });
+
+
+
 
 
 
