@@ -201,15 +201,12 @@ h3 {
 }
 
 .list-wrapper {
-  /* maybe use flex basis... properties */
   width: 100%;
   /* padding-bottom: 40px; */
 }
 
 ul li {
   list-style: square;
-  /* trying something 🙂 */
-  /* list-style-type: "🙂"; */
 }
 
 .resource-wrapper ul {
@@ -252,6 +249,7 @@ footer p {
 }
 
 /* End show and hide lists */
+
 .copyright-image {
   padding-bottom: 2px;
 }
@@ -299,8 +297,6 @@ footer p {
 
 @media (min-width: 768px) {
   .section-wrapper {
-    /* maybe use flex basis... properties */
-    /* justify-content: space-between; */
     column-gap: 10%;
   }
 

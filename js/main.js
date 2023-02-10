@@ -20,13 +20,11 @@ button.forEach((button) => {
       button.nextElementSibling.classList.remove("hide");
       button.nextElementSibling.classList.add("show");
     } else {
-      button.nextElementSibling.classList.remove("show");
-      button.nextElementSibling.classList.add("hide");
+      closeList();
     }
   });
-});
-// Closes all lists when the Escape key is clicked
-button.forEach((button) => {
+
+  // Closes all lists when the Escape key is clicked
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       if (button.nextElementSibling.classList.contains("show")) {
@@ -34,11 +32,14 @@ button.forEach((button) => {
       }
     }
   });
-  var closeList = function () {
+
+  // event handler that closes list
+  var closeList = () => {
     button.nextElementSibling.classList.remove("show");
     button.nextElementSibling.classList.add("hide");
   };
 });
+
 
 
 
