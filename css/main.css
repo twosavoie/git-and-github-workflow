@@ -96,7 +96,8 @@ textarea {
   --secondary-color: #1477D1;
   --accent-color: #75cb00;
   --text-color: #4C5D6C;
-  --border-accent-color: #447700;
+  --border-top-accent-color: #75cb00;
+  --border-bottom-accent-color: #447700;
   --button-background-color: #ffffff;
   --hover-color: #447700;
   --background-color: #ffffff;
@@ -113,12 +114,12 @@ textarea {
     --button-background-color: #083155;
     --secondary-color: #1477D1;
     --accent-color: #75cb00;
-    --accent-color: #0f5a9d;
-    --accent-color: #0d4f8b;
     --text-color: #ffffff;
-    --border-accent-color: #75cb00;
-    --border-accent-color: #0f5a9d;
-    --border-accent-color: #0d4f8b;
+    --border-top-accent-color: #0f5a9d;
+    /* --border-top-accent-color: #0d4f8b; */
+    --border-bottom-accent-color: #75cb00;
+    --border-bottom-accent-color: #0f5a9d;
+    /* --border-accent-color: #0d4f8b; */
     --hover-color: #a6ff2e;
   }
 }
@@ -163,10 +164,10 @@ button {
   font-size: 1.25rem;
   text-align: left;
   padding: 10px 15px;
-  border-top: 2px solid var(--accent-color);
-  border-left: 2px solid var(--accent-color);
-  border-right: 2px solid var(--border-accent-color);
-  border-bottom: 2px solid var(--border-accent-color);
+  border-top: 2px solid var(--border-top-accent-color);
+  border-left: 2px solid var(--border-top-accent-color);
+  border-right: 2px solid var(--border-bottom-accent-color);
+  border-bottom: 2px solid var(--border-bottom-accent-color);
 }
 
 button:hover {
