@@ -108,7 +108,8 @@ textarea {
     --background-color: #0A3B67;
     --foreground-color: #ffffff;
     --primary-color: #ffffff;
-    --button-color: #0A3B67;
+    --button-color: #ffffff;
+    --button-background-color: #0A3B67;
     --secondary-color: #1477D1;
     --accent-color: #75cb00;
     --text-color: #ffffff;
@@ -153,8 +154,10 @@ a:hover {
 button {
   background: var(--button-background-color);
   border-color: var(--accent-color);
+  border-radius: 10px;
   font-size: 1.25rem;
   text-align: left;
+  padding: 10px 15px;
   border-top: 2px solid var(--accent-color);
   border-left: 2px solid var(--accent-color);
   border-right: 2px solid var(--border-accent-color);
@@ -228,6 +231,12 @@ footer p {
   padding-bottom: 40px;
 }
 
+.site-link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* Show and hide lists */
 .hide {
   opacity: 0;
   height: 0;
@@ -242,6 +251,7 @@ footer p {
   padding-bottom: 40px;
 }
 
+/* End show and hide lists */
 .copyright-image {
   padding-bottom: 2px;
 }

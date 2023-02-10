@@ -9,8 +9,11 @@
 
 const button = document.querySelectorAll("button");
 var list = document.querySelector(".list");
+// Maybe use a class instead since there are multiple types of list?
+var gitListItem = document.querySelectorAll("li");
 var modalX = document.querySelector(".modal-x");
 
+// Toggles classes to show and hide lists
 button.forEach((button) => {
   button.addEventListener("click", function () {
     if (button.nextElementSibling.classList.contains("hide")) {
