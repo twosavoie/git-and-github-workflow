@@ -110,10 +110,15 @@ textarea {
     --primary-color: #ffffff;
     --button-color: #ffffff;
     --button-background-color: #0A3B67;
+    --button-background-color: #083155;
     --secondary-color: #1477D1;
     --accent-color: #75cb00;
+    --accent-color: #0f5a9d;
+    --accent-color: #0d4f8b;
     --text-color: #ffffff;
     --border-accent-color: #75cb00;
+    --border-accent-color: #0f5a9d;
+    --border-accent-color: #0d4f8b;
     --hover-color: #a6ff2e;
   }
 }
@@ -154,7 +159,7 @@ a:hover {
 button {
   background: var(--button-background-color);
   border-color: var(--accent-color);
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 1.25rem;
   text-align: left;
   padding: 10px 15px;
