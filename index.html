@@ -28,6 +28,15 @@
 
 <body>
   <header class="flex-wrapper">
+    <!-- Start add modal -->
+    <!-- <div class="modal">
+      <span class="modal-x">x</i></span>
+      <img src="img/you_got_this.gif" />
+      <p>Keep it up, Skillcrusher! 🎉</p>
+    </div>
+    <button class="got-this">Who's got this?</button>
+    </div> -->
+    <!-- End add modal -->
     <div class="content-wrapper">
       <h1>Git & GitHub Workflow</h1>
     </div>
@@ -39,47 +48,50 @@
         <div class="list-wrapper">
           <button class="reveal-list">New Git Repo</button>
           <ol class="new-git-repo hide list">
-            <li>git init</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>Create GitHub repo</li>
-            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+            <li class="git-list-item unstruck">git init</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Create GitHub repo</li>
+            <li class="git-list-item unstruck">Make sure ssh is checked and copy commands from GitHub to add remote repo
+              to local project</li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Make A New Project</button>
           <ol class="make-new-project hide list">
-            <li>mkdir <i>my-directory-name</i></li>
-            <li>cd <i>my-directory-name</i></li>
-            <li>touch <i>my-filename</i></li>
-            <li>git init</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>Create GitHub repo</li>
-            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+            <li class="git-list-item unstruck">mkdir <i>my-directory-name</i></li>
+            <li class="git-list-item unstruck">cd <i>my-directory-name</i></li>
+            <li class="git-list-item unstruck">touch <i>my-filename</i></li>
+            <li class="git-list-item unstruck">git init</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Create GitHub repo</li>
+            <li class="git-list-item unstruck">Make sure ssh is checked and copy commands from GitHub to add remote repo
+              to local project</li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Fork and Clone Project</button>
           <ol class="clone-project hide list">
-            <li>Fork project</li>
-            <li>Choose only main branch or additional topic branches to be forked</li>
-            <li>Copy ssh url from my repo</li>
-            <li>Navigate in the command line to where directory will be added</li>
-            <li>git clone <i>ssh url from my repo</i></li>
-            <li>cd <i>my-project-name</i></li>
+            <li class="git-list-item unstruck">Fork project</li>
+            <li class="git-list-item unstruck">Choose only main branch or additional topic branches to be forked</li>
+            <li class="git-list-item unstruck">Copy ssh url from my repo</li>
+            <li class="git-list-item unstruck">Navigate in the command line to where directory will be added</li>
+            <li class="git-list-item unstruck">git clone <i>ssh url from my repo</i></li>
+            <li class="git-list-item unstruck">cd <i>my-project-name</i></li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Download Project</button>
           <ol class="download-project hide list">
-            <li>cd <i>my-directory-name</i></li>
-            <li>touch <i>my-filename</i></li>
-            <li>git init</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>Create GitHub repo</li>
-            <li>Make sure ssh is checked and copy commands from GitHub to add remote repo to local project</li>
+            <li class="git-list-item unstruck">cd <i>my-directory-name</i></li>
+            <li class="git-list-item unstruck">touch <i>my-filename</i></li>
+            <li class="git-list-item unstruck">git init</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Create GitHub repo</li>
+            <li class="git-list-item unstruck">Make sure ssh is checked and copy commands from GitHub to add remote repo
+              to local project</li>
           </ol>
         </div>
       </section>
@@ -90,32 +102,32 @@
         <div class="list-wrapper">
           <button class="reveal-list">Updating Existing Project</button>
           <ol class="update-existing-project hide list">
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>git push origin <i>my-branch-name</i></li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">git push origin <i>my-branch-name</i></li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Creating a Topic Branch</button>
           <ol class="create-topic-branch hide list">
-            <li>Add and commit all changes before switching branches</li>
+            <li class="git-list-item unstruck">Add and commit all changes before switching branches</li>
             <ul>
-              <li>git add -A</li>
-              <li>git commit -m "<i>My Message</i>"</li>
+              <li class="git-list-item unstruck">git add -A</li>
+              <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
             </ul>
-            <li>git checkout -b <i>my-topic-branch-name</i></li>
+            <li class="git-list-item unstruck">git checkout -b <i>my-topic-branch-name</i></li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Merge Topic Branch into Main Branch</button>
           <ol class="merge-topic-branch hide list">
-            <li>Add and commit all changes before switching branches</li>
+            <li class="git-list-item unstruck">Add and commit all changes before switching branches</li>
             <ul>
-              <li>git add -A</li>
-              <li>git commit -m "<i>My Message</i>"</li>
+              <li class="git-list-item unstruck">git add -A</li>
+              <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
             </ul>
-            <li>git checkout main</li>
-            <li>git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">git checkout main</li>
+            <li class="git-list-item unstruck">git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
           </ol>
         </div>
       </section>
@@ -128,88 +140,88 @@
         <div class="list-wrapper">
           <button class="reveal-list">I'm Added to the Project</button>
           <ol class="working-with-a-team hide list">
-            <li>Fork project</li>
-            <li>Choose only main branch or additional topic branches to be forked</li>
-            <li>Copy ssh url from my repo</li>
-            <li>Navigate in the command line to where directory will be added</li>
-            <li>git clone <i>ssh url from my repo</i></li>
-            <li>cd <i>my-project-name</i></li>
-            <li>Create a topic branch</li>
+            <li class="git-list-item unstruck">Fork project</li>
+            <li class="git-list-item unstruck">Choose only main branch or additional topic branches to be forked</li>
+            <li class="git-list-item unstruck">Copy ssh url from my repo</li>
+            <li class="git-list-item unstruck">Navigate in the command line to where directory will be added</li>
+            <li class="git-list-item unstruck">git clone <i>ssh url from my repo</i></li>
+            <li class="git-list-item unstruck">cd <i>my-project-name</i></li>
+            <li class="git-list-item unstruck">Create a topic branch</li>
             <ul>
-              <li>git checkout -b <i>my-topic-branch-name</i></li>
+              <li class="git-list-item unstruck">git checkout -b <i>my-topic-branch-name</i></li>
             </ul>
-            <li>Work on the topic branch</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>Merge work into main branch</li>
+            <li class="git-list-item unstruck">Work on the topic branch</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Merge work into main branch</li>
             <ul>
-              <li>git checkout main</li>
-              <li>git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
+              <li class="git-list-item unstruck">git checkout main</li>
+              <li class="git-list-item unstruck">git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
             </ul>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Update Local Branchs with Upstream Branch</button>
           <ol class="update-local-branches hide list">
-            <li>Connect to the upstream repo</li>
+            <li class="git-list-item unstruck">Connect to the upstream repo</li>
             <ul>
-              <li>git remote add upstream <i>ssh url from upstream repo</i></li>
+              <li class="git-list-item unstruck">git remote add upstream <i>ssh url from upstream repo</i></li>
             </ul>
-            <li>Fetch from upsteam branch</li>
+            <li class="git-list-item unstruck">Fetch from upsteam branch</li>
             <ul>
-              <li>git fetch upstream</li>
+              <li class="git-list-item unstruck">git fetch upstream</li>
             </ul>
-            <li>Checkout main branch</li>
+            <li class="git-list-item unstruck">Checkout main branch</li>
             <ul>
-              <li>git checkout main</li>
+              <li class="git-list-item unstruck">git checkout main</li>
             </ul>
-            <li>Merge upstream main branch into local main branch</li>
+            <li class="git-list-item unstruck">Merge upstream main branch into local main branch</li>
             <ul>
-              <li>git merge upstream/main</li>
+              <li class="git-list-item unstruck">git merge upstream/main</li>
             </ul>
-            <li>Checkout topic branch</li>
+            <li class="git-list-item unstruck">Checkout topic branch</li>
             <ul>
-              <li>git checkout <i>my-topic-branch</i></li>
+              <li class="git-list-item unstruck">git checkout <i>my-topic-branch</i></li>
             </ul>
-            <li>Merge main branch into topic branch</li>
+            <li class="git-list-item unstruck">Merge main branch into topic branch</li>
             <ul>
-              <li>git merge main -m "<i>My Message</i>"</li>
+              <li class="git-list-item unstruck">git merge main -m "<i>My Message</i>"</li>
             </ul>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Daily Workflow</button>
           <ol class="daily-workflow hide list">
-            <li>git fetch upstream</li>
-            <li>git checkout main</li>
-            <li>git merge upstream/main</li>
-            <li>git checkout <i>my-topic-branch</i></li>
-            <li>git merge main -m "<i>My Message</i>"</li>
-            <li>Work on the topic branch</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
-            <li>Merge work into main branch</li>
+            <li class="git-list-item unstruck">git fetch upstream</li>
+            <li class="git-list-item unstruck">git checkout main</li>
+            <li class="git-list-item unstruck">git merge upstream/main</li>
+            <li class="git-list-item unstruck">git checkout <i>my-topic-branch</i></li>
+            <li class="git-list-item unstruck">git merge main -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Work on the topic branch</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Merge work into main branch</li>
             <ul>
-              <li>git checkout main</li>
-              <li>git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
+              <li class="git-list-item unstruck">git checkout main</li>
+              <li class="git-list-item unstruck">git merge <i>my-topic-branch-name</i> -m "<i>My Message</i>"</li>
             </ul>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Ready to Issue Pull Request</button>
           <ol class="working-with-a-team hide list">
-            <li>All code has been added, committed, and merged into the main branch</li>
-            <li>Push main branch to GitHub remote repo</li>
+            <li class="git-list-item unstruck">All code has been added, committed, and merged into the main branch</li>
+            <li class="git-list-item unstruck">Push main branch to GitHub remote repo</li>
             <ul>
-              <li>git push origin main</li>
+              <li class="git-list-item unstruck">git push origin main</li>
             </ul>
-            <li>Issue pull request</li>
+            <li class="git-list-item unstruck">Issue pull request</li>
             <ul>
-              <li>Click the "Pull Request" button</li>
-              <li>Click the "Create Pull Request" button</li>
-              <li>Click the "New Pull Request" button</li>
-              <li>Choose which branch you want to compare</li>
-              <li>Check the git diff to be sure the changes are what you want</li>
-              <li>Click the "Create Pull Request" button</li>
+              <li class="git-list-item unstruck">Click the "Pull Request" button</li>
+              <li class="git-list-item unstruck">Click the "Create Pull Request" button</li>
+              <li class="git-list-item unstruck">Click the "New Pull Request" button</li>
+              <li class="git-list-item unstruck">Choose which branch you want to compare</li>
+              <li class="git-list-item unstruck">Check the git diff to be sure the changes are what you want</li>
+              <li class="git-list-item unstruck">Click the "Create Pull Request" button</li>
             </ul>
           </ol>
         </div>
@@ -220,37 +232,38 @@
         <div class="list-wrapper">
           <button class="reveal-list">Helpful Commands</button>
           <ol class="helpful-commands hide list">
-            <li>What directory am I in?</li>
+            <li class="git-list-item unstruck">What directory am I in?</li>
             <ul>
-              <li>pwd</li>
+              <li class="git-list-item unstruck">pwd</li>
             </ul>
-            <li>Have my changes been added and committed?</li>
+            <li class="git-list-item unstruck">Have my changes been added and committed?</li>
             <ul>
-              <li>git status</li>
+              <li class="git-list-item unstruck">git status</li>
             </ul>
-            <li>What remote repos have been added to my directory?</li>
+            <li class="git-list-item unstruck">What remote repos have been added to my directory?</li>
             <ul>
-              <li>git remote -v</li>
+              <li class="git-list-item unstruck">git remote -v</li>
             </ul>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Error Message</button>
           <ol class="error-messages hide list">
-            <li>Read the error message</li>
-            <li>Check for a typo</li>
-            <li>Google the error message</li>
-            <li>Be very careful if the command is to remove files or folders. Something removed in the command line is
+            <li class="git-list-item unstruck">Read the error message</li>
+            <li class="git-list-item unstruck">Check for a typo</li>
+            <li class="git-list-item unstruck">Google the error message</li>
+            <li class="git-list-item unstruck">Be very careful if the command is to remove files or folders. Something
+              removed in the command line is
               gone-gone! 😰</li>
           </ol>
         </div>
         <div class="list-wrapper">
           <button class="reveal-list">Merge Conflicts</button>
           <ol class="merge-conflicts hide list">
-            <li>Resolve merge conflicts in the text editor</li>
-            <li>Remove all conflict markers</li>
-            <li>git add -A</li>
-            <li>git commit -m "<i>My Message</i>"</li>
+            <li class="git-list-item unstruck">Resolve merge conflicts in the text editor</li>
+            <li class="git-list-item unstruck">Remove all conflict markers</li>
+            <li class="git-list-item unstruck">git add -A</li>
+            <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
           </ol>
         </div>
       </section>
@@ -286,8 +299,9 @@
   <footer class="flex-wrapper">
     <div class="content-wrapper">
       <p>Copyright
-        <script>document.write(new Date().getFullYear())</script> | <a href="https://lscodes.com/" target="_blank" class="site-link">Lisa Savoie</a> <img src="img/favicon.png"
-          alt="LS Codes logo" width="16px" class="copyright-image">
+        <script>document.write(new Date().getFullYear())</script> | <a href="https://lscodes.com/" target="_blank"
+          class="site-link">Lisa Savoie</a> <img src="img/favicon.png" alt="LS Codes logo" width="16px"
+          class="copyright-image">
       </p>
     </div>
   </footer>

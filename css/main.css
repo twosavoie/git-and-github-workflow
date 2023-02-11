@@ -96,6 +96,7 @@ textarea {
   --secondary-color: #1477D1;
   --accent-color: #75cb00;
   --text-color: #4C5D6C;
+  --strikeout-text-color: #b5b5b5;
   --border-top-accent-color: #75cb00;
   --border-bottom-accent-color: #447700;
   --button-background-color: #ffffff;
@@ -254,16 +255,27 @@ footer p {
   padding-bottom: 40px;
 }
 
+/* Strike out list item when clicked and unstrike when clicked again or esc key is clicked */
+.unstruck {
+  text-decoration: none;
+  color: var(text-color);
+}
+
+.strikeout {
+  text-decoration: line-through;
+  color: var(--strikeout-text-color);
+}
+
 /* End show and hide lists */
 
 .copyright-image {
   padding-bottom: 2px;
 }
 
-/* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825
+/* Code from https://codesandbox.io/s/js-lesson06-challenge01-solution-v1o84?file=/js/script.js:0-825 */
   
 
-  .modal {
+  /* .modal {
     display: none;
     position: relative;
     background: #fff;
@@ -299,7 +311,7 @@ footer p {
   .modal .modal-x:hover {
     font-weight: bold;
     font-size: 0.6em;
-  } */
+  }  */
 
 @media (min-width: 768px) {
   .section-wrapper {
