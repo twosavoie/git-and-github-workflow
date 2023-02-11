@@ -4,14 +4,13 @@
 // 3. There's a way to close the list - an x or clicking outside of the list
 // 4. A modal for help 
 
-
-
-
 const revealListButton = document.querySelectorAll(".reveal-list");
 // var gitList = document.querySelector(".list");
 
 // Maybe use a class instead since there are multiple types of list?
-var gitListItem = document.querySelectorAll("li");
+var gitListItem = document.querySelectorAll(".git-list-item");
+var button = document.querySelector(".got-this");
+var modal = document.querySelector(".modal");
 var modalX = document.querySelector(".modal-x");
 
 // Toggles classes to show and hide lists
@@ -33,7 +32,6 @@ revealListButton.forEach((revealListButton) => {
       }
     }
   });
-
   // event handler that closes list
   function closeList() {
     revealListButton.nextElementSibling.classList.remove("show");
@@ -41,23 +39,49 @@ revealListButton.forEach((revealListButton) => {
   }
 });
 
+// When list item is clicked, it greys out
+gitListItem.forEach((gitListItem) => {
+  gitListItem.addEventListener("click", function () {
+    if (gitListItem.classList.contains("unstruck")) {
+      gitListItem.classList.remove("unstruck");
+      gitListItem.classList.add("strikeout");
+    } else {
+      unstrikeListItem();
+    }
+  });
+
+  // Closes all lists when the Escape key is clicked
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      if (gitListItem.classList.contains("strikeout")) {
+        unstrikeListItem();
+      }
+    }
+  });
+
+  // event handler that closes list
+  function unstrikeListItem() {
+    gitListItem.classList.remove("strikeout");
+    gitListItem.classList.add("unstruck");
+  }
+});
 
 
 
 
 
 // // Bonus Step
-// // var openModal = function () {
-// //   modal.classList.add("show-modal");
-// //   button.innerText = "You've got this!!!";
-// // };
+// var openModal = function () {
+//   modal.classList.add("show-modal");
+//   button.innerText = "You've got this!!!";
+// };
 
 // button.addEventListener("click", function () {
 //   modal.classList.add("show-modal");
 //   button.innerText = "You've got this!!!";
 
 //   // Bonus Step
-//   // openModal();
+//   openModal();
 // });
 
 // modalX.addEventListener("click", function () {
