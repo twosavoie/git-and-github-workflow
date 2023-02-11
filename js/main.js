@@ -9,7 +9,6 @@ revealListButton.forEach((revealListButton) => {
       revealListButton.nextElementSibling.classList.add("show");
     } else {
       closeList();
-      unstrikeListItem();
     }
   });
 
