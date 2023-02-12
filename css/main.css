@@ -159,6 +159,9 @@ h3 {
   padding-left: 6px;
 }
 
+p {
+  font-size: 1.25rem;
+}
 /* Change the colors of the checkboxes */
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
 /* On mouse-over, add a grey background color */
@@ -175,6 +178,7 @@ h3 {
 
 label {
   line-height: 2;
+  font-size: 1.25rem;
 }
 
 .list-wrapper ul {
