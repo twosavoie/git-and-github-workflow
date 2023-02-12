@@ -146,6 +146,11 @@ a {
   color: var(--text-color);
 }
 
+p {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+
 a:hover {
   color: var(--accent-color);
 }
