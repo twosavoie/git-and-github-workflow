@@ -209,8 +209,6 @@ label {
 
 ul li {
   list-style: square;
-  /* trying something 🙂 */
-  /* list-style-type: "🙂"; */
 }
 
 .resource-wrapper ul {
@@ -258,6 +256,11 @@ footer p {
 }
 
 @media (min-width: 1200px) {
+  label {
+    line-height: 2;
+    font-size: 1rem;
+  }
+
   .section-wrapper {
     column-gap: 5%;
   }
