@@ -1,8 +1,14 @@
 const revealListButton = document.querySelectorAll(".reveal-list");
 const gitListItem = document.querySelectorAll(".git-list-item");
+// todo - move event handlers out and consolidate them into a utility function
+// todo - move escape key event listener out and consolidate
+// todo - add a reset button
+// todo - add show and hide icons to button
+// todo - add ability to toggle images of the command line
 
 // Toggles classes to show and hide lists
 revealListButton.forEach((revealListButton) => {
+  console.log(revealListButton.nextElementSibling);
   revealListButton.addEventListener("click", function () {
     if (revealListButton.nextElementSibling.classList.contains("hide")) {
       revealListButton.nextElementSibling.classList.remove("hide");
