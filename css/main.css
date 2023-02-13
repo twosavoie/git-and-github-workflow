@@ -144,9 +144,6 @@ li,
 a {
   font-family: var(--header-font);
   color: var(--text-color);
-}
-
-p {
   font-size: 1.25rem;
   line-height: 2;
 }
@@ -256,6 +253,13 @@ footer p {
 }
 
 @media (min-width: 1200px) {
+
+  p,
+  li,
+  a {
+    font-size: 1rem;
+  }
+
   .section-wrapper {
     column-gap: 5%;
   }
