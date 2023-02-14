@@ -6,6 +6,6 @@ There's a [GitHub Pages][1] site. The buttons are clickable to show or hide a li
 
 There are also two HTML & CSS only branches. One is a numbered list of commands. The other has a checklist so a user can keep track of steps they've taken. 
 
-Hope you find it helpful. Stay tuned for updates! 🙂
+Hope you find it helpful. If you do, I would appreciate it if you would leave me a star. ⭐ Stay tuned for updates! 🙂
 
 [1]: https://twosavoie.github.io/git-and-github-workflow/
