@@ -50,7 +50,7 @@
           </ol>
         </div>
         <div class="list-wrapper">
-          <button type="button" class="reveal-list">Make A New Project</button>
+          <button type="button" class="reveal-list">Make a New Project</button>
           <ol class="make-new-project hide list">
             <li class="git-list-item unstruck">mkdir <i>my-directory-name</i></li>
             <li class="git-list-item unstruck">cd <i>my-directory-name</i></li>
@@ -151,7 +151,7 @@
             </ul>
         </div>
         <div class="list-wrapper">
-          <button type="button" class="reveal-list">Update Local Branchs with Upstream Branch</button>
+          <button type="button" class="reveal-list">Update Local Branches with Upstream Branch</button>
           <ol class="update-local-branches hide list">
             <li class="git-list-item unstruck">Connect to the upstream repo</li>
             <ul>
@@ -258,6 +258,39 @@
             <li class="git-list-item unstruck">git commit -m "<i>My Message</i>"</li>
           </ol>
         </div>
+        <div class="list-wrapper">
+          <button type="button" class="reveal-list">Remove Unwanted Code</button>
+          <ol class="unwanted-code hide list">
+            <li class="git-list-item unstruck">If you're working on a topic branch, you can add and commit the changes,
+              switch to the main branch without merging, and then delete the topic branch. 😄</li>
+            <li class="git-list-item unstruck">If you need to remove one or more commits, you can use git reset. Start
+              by listing the commits so you can see the commit hash. Then reset the Head to the last commit you want to
+              keep</li>
+            <ul>
+              <li class="git-list-item unstruck">git log -3</li>
+              <li class="git-list-item unstruck">git reset --hard <i>commit hash you want to keep</i></li>
+              <li class="git-list-item unstruck">git push origin <i>my-branch-name</i> --force</li>
+              <li class="git-list-item unstruck">Be very careful with git reset and git push --force. These commands
+                will permanently remove code from the
+                branch history. 😰 For safety, consider creating a backup branch before using these commands.</li>
+            </ul>
+          </ol>
+        </div>
+        <div class="list-wrapper">
+          <button type="button" class="reveal-list">Stash Code</button>
+          <ol class="stash-code hide list">
+            <li class="git-list-item unstruck">There are times you want to save your work without committing it.
+              Stashing your code helps to keep your commit history clean and relevant.</li>
+            <ul>
+              <li class="git-list-item unstruck">git stash</li>
+            </ul>
+            <li class="git-list-item unstruck">Create a separate branch with you stashed code. Also clears your stash
+              list.</li>
+            <ul>
+              <li class="git-list-item unstruck">git stash branch <i>my-new-branch-name</i></li>
+            </ul>
+          </ol>
+        </div>
       </section>
       <h2>Resources</h2>
       <section class="troubleshooting-projects section-wrapper">
@@ -291,8 +324,8 @@
   <footer class="flex-wrapper">
     <div class="content-wrapper">
       <p>Copyright
-        <script>document.write(new Date().getFullYear())</script> | <a href="https://lscodes.com/" target="_blank"
-          class="site-link">Lisa Savoie</a> <img src="img/favicon.png" alt="LS Codes logo" width="16px"
+        <script>document.write(new Date().getFullYear())</script> | <a href="https://github.com/twosavoie"
+          target="_blank" class="site-link">Lisa Savoie</a> <img src="img/favicon.png" alt="LS Codes logo" width="16px"
           class="copyright-image">
       </p>
     </div>
